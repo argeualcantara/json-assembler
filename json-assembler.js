@@ -43,10 +43,10 @@ $.assembleJSON = function (atributos, fieldOnly){
 			att = $(att).children().last().children();
 		}
 		var obj = $(att).each(function(){
-			if(this.tagName.toUpperCase() == 'select'.toUpperCase() ||
-			   this.tagName.toUpperCase() == 'input'.toUpperCase() ||
-			   this.tagName.toUpperCase() == 'textarea'.toUpperCase()){
-				switch($(this).attr("type")){
+			if(this.tagName.toLowerCase() == "select" ||
+			   this.tagName.toLowerCase() == "input" ||
+			   this.tagName.toLowerCase() == "textarea"){
+				switch($(this).attr("type").toLowerCase()){
 				case "radio":
 				case "checkbox":
 				{
