@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Example</title>
+	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="json-assembler.js"></script>
+	<script>$(document).ready(function(){
+				$("#saveBtn").click(function(){
+					var form = $.assembleJSON($('table > tbody').children(), false);
+					console.log(form);
+				});
+			});
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Username: </td> <td><input type="text" name="username"/></td>
+			</tr>
+			<tr>
+				<td>Password: </td> <td><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+				<td>Email: </td> <td><input type="text" name="email"/></td>
+			</tr>
+			<tr>
+				<td>phone number: </td> <td><input type="text" name="phone"/></td>
+			</tr>
+			<tr>
+				<td>Address 1: </td> <td><input type="text" name="address.street"/></td>
+			</tr>
+			<tr>
+				<td>City: </td> <td><input type="text" name="address.city"/></td>
+			</tr>
+			<tr>
+				<td>State/Province: </td> <td><input type="text" name="address.state"/></td>
+			</tr>
+			<tr>
+				<td>Country: </td> <td><input type="text" name="address.country"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" id="saveBtn" value="Save"/></td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+</html>
